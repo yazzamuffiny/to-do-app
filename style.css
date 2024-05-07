@@ -3,3 +3,54 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#todo-container {
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#todo-list {
+    list-style-type: none;
+}
+
+#todo-input[type="text"]{
+    padding: 10px 10px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#add-button {
+    background-color: rgb(102, 170, 147);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-button:hover {
+    background-color: rgb(65, 128, 128);
+    transition: all o.3s ease;
+}

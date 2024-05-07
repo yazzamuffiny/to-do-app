@@ -28,3 +28,25 @@ function addTodo() {
         alert("Please enter a valid To Do Item");
     }
 }
+
+//add event listener to the add button to add a new todo item
+document.getElementById("add-button").addEventListener("click", addTodo);
+
+//event listener to mark todo items as completed
+
+// change event on the todo item
+document.getElementById("todo-list").addEventListener("change", function(event) {
+    //check if the event trigger was a checkbox
+    if (event.target.type === "checkbox") {
+        //get the parent item of the checkbox
+        const listItem = event.target.parentNode;
+        //check if checkbox is checked or not
+        if (event.target.checked) {
+            //apply line-through style when checkbox is checked:
+            listItem.style.textDecoration = "line-through";
+        } else {
+            //remove the line through when unchecked
+            listItem.style.textDecoration = "none";
+        }
+    }
+});
